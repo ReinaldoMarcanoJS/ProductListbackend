@@ -9,10 +9,11 @@ export const productValidation = (
 
   if (!name) {
     res.status(400).json({ message: 'El campo "name" es requerido' });
+    return
   }
   if (!price) {
     res.status(400).json({ message: 'El campo "price" es requerido' });
-
+    return
   }
 
   next();
